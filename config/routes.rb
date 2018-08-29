@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/courses', to: 'courses#index'
   get 'instructors/index'
   get 'instructors/edit'
   get 'instructors/new'
