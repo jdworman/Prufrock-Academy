@@ -1,2 +1,13 @@
-<h1>Students#new</h1>
-<p>Find me in app/views/students/new.html.erb</p>
+
+<h1>Add New Student</h1>
+
+<%= form_with scope: :students, url: students_path, local: true do |f| %>
+
+<%= f.text_field :last_name, placeholder: "Last Name"%>
+<%= f.text_field :first_name, placeholder: "First Name" %>
+ <%= f.text_field :email, placeholder: "Email Address" %>
+ <%= f.number_field :age, placeholder: "Age" %>
+ <%= f.select :education, ['HS', 'College', 'Masters', 'PHD'] %>
+<%= f.submit 'Add Student' %>
+<% end %>
+ 
