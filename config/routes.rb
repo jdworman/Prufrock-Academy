@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'students', to: 'students#index' 
+  get 'instructors', to: 'instructors#index'
   get 'instructors/index'
   get 'instructors/edit'
   get 'instructors/new'

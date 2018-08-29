@@ -26,37 +26,8 @@
 </p>
 
 <div class="buttons">
-  <%= button_tag 'Edit', onclick: "location.href='#{edit_student_path(@student)}'", class: "btn btn-info" %>
-  <%= button_tag 'Back', onclick: "location.href='#{students_path}'", class: "btn btn-info" %>
-  <%= button_tag 'Delete', onclick: "location.href='#{students_path}'", class: "btn btn-info" %>
+  <%= link_to 'Edit', onclick: "location.href='#{edit_student_path(@student)}'", class: "btn btn-info" %>
+  <%= link_to 'Back', onclick: "location.href='#{students_path}'", class: "btn btn-info" %>
+  <%= link_to "Delete", @student, :method => :delete, :confirm => "Are you sure ?"%>
+ 
 </div>
-
-
-
-<%= link_to @student, method: :delete do %>
-delete
-
-<% end %> 
-
-<%# 
-
-
-<%
-  <%  Generates: <a href="#" onclick="new Ajax.Updater('posts', '/blog/destroy/3', {asynchronous:true, evalScripts:true});
-  #            return false;">Delete this post</a>
-  link_to_remote "Delete this post", :update => "posts",
-    :url => { :action => "destroy", :id => post.id }
-
-show.html.erb show profile info 
-find instructor by params Id number
- %>
-
-<%# index => 
-    3 links
-
-    link to instructor
-
-    link to edit
-
-    link to destroy
-    create link outside loop %>   
