@@ -20,23 +20,35 @@
  body {
      background-color: #57222c;
     color: #ffd200;
+    background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.7), black), url("images/background.jpeg");
     margin: 0;
     padding: 0;
  }
 
  h1 {
-     font-family: Sans-serif;
-     font-size: 44px;
-     text-align: left;
-     margin: 0;
-     padding: 0;
- }
+  font-family: sans-serif;
+  color: #ffd200;
+  text-align: center;
+  position: relative;
+  font-size: 300%;
+  display: inline-block;
+  text-transform: uppercase;
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+}
 
  h6 {
      font-family: Sans-serif;
      font-size: 22px;
      text-align: center;
  }
+
+ .image {
+   width: 100%;
+   
+ }
+
  
  
 /* Navigation section
