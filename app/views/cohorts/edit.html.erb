@@ -3,8 +3,8 @@
 <%= form_with(model: @instructors, local: true) do |f| %>
 
 <%= f.text_field :name, placeholder: "Enter the Name of Cohort"%><br> 
-<%= f.date :start_date, placeholder: "Start Date" %><br> 
- <%= f.date :end_date, placeholder: "End Date" %><br> 
+<%= f.date_field :start_date, placeholder: "Start Date" %><br> 
+ <%= f.date_field :end_date, placeholder: "End Date" %><br> 
  <%= f.integer :instructor_id, placeholder: "Instructor ID" %><br> 
  <%= f.integer :student_id, placeholder: "Student ID" %><br> 
 
