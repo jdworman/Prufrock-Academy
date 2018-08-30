@@ -16,6 +16,11 @@
 </p>
 
 <p>
+  <strong>Email:</strong>
+  <%= @students.email %>
+</p>
+
+<p>
   <strong>Age:</strong>
   <%= @students.age %>
 </p>
@@ -27,6 +32,6 @@
 
 <div class="buttons">
   <a href="/students">Students List</a>
-  <a href="/edit/<%= @students.id %>">Edit</a>
-  <a href="/students/<%= @students.id %>" onclick="return confirm('Are you sure?')" data-method="delete">Delete</a>
+  <%= link_to 'Edit', edit_student_path(@students) %>
+  <a href="/students/<%= @students.id %>" data-method="delete">Delete</a>
 </div>

@@ -8,7 +8,6 @@ class StudentsController < ApplicationController
   end
 
   def new
-    @students = Student.find(params[:id])
   end
 
   def show
@@ -20,6 +19,16 @@ class StudentsController < ApplicationController
  
     @students.save
     redirect_to @students
+  end
+
+  def update
+    @students = Student.find(params[:id])
+
+    if @students.update(params.require(:student).permit(:first_name, :last_name, :email, :age, :education))
+      redirect_to @students
+    else
+      render 'edit'
+    end
   end
 
   def destroy
