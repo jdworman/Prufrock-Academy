@@ -1,2 +1,12 @@
-<h1>Courses#new</h1>
-<p>Find me in app/views/courses/new.html.erb</p>
+<h1>Add New Courses</h1>
+
+<%= form_with scope: :courses, url: courses_path, local: true do |f| %>
+
+<%= f.text_field :name, placeholder: "Name of Course"%><br> 
+<%= f.integer :hours, placeholder: "Total in Class Hours" %><br> 
+
+<%= f.text_area :bio, placeholder: "Write a quick bio." %><br>
+
+<%= f.submit 'Add Course' %><br>
+<% end %>
+ 

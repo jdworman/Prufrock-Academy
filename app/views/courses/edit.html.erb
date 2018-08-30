@@ -1,28 +1,10 @@
-<div class="courses create">
-  <h2>Courses</h2>
+<h1>Edit Courses</h1>
 
-  <%= link_to("Add New Course", '#', :class => 'action new') %>
+<%= form_with(model: @courses, local: true) do |f| %>
 
-  <table class="listing" summary="Course list">
-   <tr><class="header">
-     <th>#</th>
-     <th>Courses</th>
-     <th>Visiable</th>
-     <th>Pages</th>
-     <th>Actions</th>
-   </tr>
-   <% @courses.each do |course| %>
-   <tr>
-     <td><%= course.position %></td>
-     <td><%= course.name %></td>
-     <td class="center"><%= course.visible ? 'Yes' : 'No' %></td>
-     <td class="center"><%= course.pages.size %></td>
-     <td class="actions">
-     <%= link_to("Show", '#', :class => 'action show') %>
-     <%= link_to("Edit", '#', :class => 'action edit') %>
-     <%= link_to("Delete", '#', :class => 'action delete') %>
-</td>
-</tr>
+<%= f.text_field :name, placeholder: "Name of Course"%><br> 
+<%= f.text_field :hours, placeholder: "Total in Class Hours" %><br> 
+
+
+<%= f.submit 'Edit Course' %><br>
 <% end %>
-</table>
-</div>

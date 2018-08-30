@@ -1,2 +1,17 @@
-<h1>Cohorts#new</h1>
-<p>Find me in app/views/cohorts/new.html.erb</p>
+<h1>Add New Cohort</h1>
+
+<%= form_with scope: :cohorts, url: cohorts_path, local: true do |f| %>
+
+<%= f.text_field :name, placeholder: "Enter the Name of Cohort"%><br> 
+<%= f.date :start_date, placeholder: "Start Date" %><br> 
+ <%= f.date :end_date, placeholder: "End Date" %><br> 
+ <%= f.integer :instructor_id, placeholder: "Instructor ID" %><br> 
+ <%= f.integer :student_id, placeholder: "Student ID" %><br> 
+ 
+<%= f.text_area :bio, placeholder: "Write a quick bio." %><br>
+
+<%= f.submit 'Add Student' %><br>
+<% end %>
+
+ 
+ 

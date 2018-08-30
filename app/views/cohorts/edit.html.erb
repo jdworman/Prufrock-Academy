@@ -1,2 +1,12 @@
-<h1>Cohorts#edit</h1>
-<p>Find me in app/views/cohorts/edit.html.erb</p>
+<h1>Edit Cohort</h1>
+
+<%= form_with(model: @instructors, local: true) do |f| %>
+
+<%= f.text_field :name, placeholder: "Enter the Name of Cohort"%><br> 
+<%= f.date :start_date, placeholder: "Start Date" %><br> 
+ <%= f.date :end_date, placeholder: "End Date" %><br> 
+ <%= f.integer :instructor_id, placeholder: "Instructor ID" %><br> 
+ <%= f.integer :student_id, placeholder: "Student ID" %><br> 
+
+<%= f.submit 'Edit Cohort' %><br>
+<% end %>

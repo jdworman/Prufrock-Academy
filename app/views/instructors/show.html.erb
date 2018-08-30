@@ -5,13 +5,13 @@
 </div>
 
 <p>
-  <strong>First name:</strong>
-  <%= @instructor.first_name %>
+  <strong>First Name:</strong>
+  <%= @instructors.first_name %>
 </p>
 
 <p>
-  <strong>Last name:</strong>
-  <%= @instructor.last_name %>
+  <strong>Last Name:</strong>
+  <%= @instructors.last_name %>
 </p>
 
 <p>
@@ -20,22 +20,22 @@
 </p>
 <p>
   <strong>Age:</strong>
-  <%= @instructor.age %>
+  <%= @instructors.age %>
 </p>
 
 <p>
   <strong>Salary:</strong>
-  <%= @instructor.salary%>
+  <%= @instructors.salary%>
 </p>
 
 <p>
   <strong>Education:</strong>
-  <%= @instructor.education %>
+  <%= @instructors.education %>
 </p>
 
 <div class="buttons">
-  <%= link_to 'Edit', onclick: "location.href='#{edit_instructor_path(@instructor)}'", class: "btn btn-info" %>
-  <%= link_to 'Back', onclick: "location.href='#{students_path}'", class: "btn btn-info" %>
-  <%= link_to "Delete", @instructor, :method => :delete, :confirm => "Are you sure ?"%>
- 
+  <a href="/instructors">Students List</a>
+  <%= link_to 'Edit', edit_instructor_path(@instructors) %>
+  <a href="/instructorss/<%= @instructors.id %>" data-method="delete">Delete</a>
 </div>
+

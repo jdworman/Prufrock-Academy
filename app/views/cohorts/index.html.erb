@@ -1,2 +1,11 @@
-<h1>Cohorts#index</h1>
-<p>Find me in app/views/cohorts/index.html.erb</p>
+ 
+<table>
+    <tr>
+        <th>Cohorts</td>
+    </tr>
+    <% @cohorts.each do |s| %>
+    <tr>
+        <td><a href="/cohorts/<%= s.id %>"><%= s.first_name %> <%= s.last_name %></a></td>
+    </tr>
+    <% end %>
+ </table>

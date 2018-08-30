@@ -1,2 +1,28 @@
-<h1>Courses#show</h1>
-<p>Find me in app/views/courses/show.html.erb</p>
+
+<p id="notice"><%= notice %></p>
+
+<div class="section-header">
+  <h1>Course Info</h1>
+</div>
+
+<p>
+  <strong>Name:</strong>
+  <%= @courses.name %>
+</p>
+
+<p>
+  <strong>Hours:</strong>
+  <%= @courses.hours %>
+</p>
+
+
+<div class="buttons">
+  <a href="/courses">courses List</a>
+  <%= link_to 'Edit', edit_course_path(@courses) %>
+  <a href="/courses/<%= @courses.id %>" data-method="delete">Delete</a>
+</div>
+
+
+
+
+  

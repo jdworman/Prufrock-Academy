@@ -1,2 +1,42 @@
-<h1>Cohorts#show</h1>
-<p>Find me in app/views/cohorts/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<div class="section-header">
+  <h1>Cohorts Info</h1>
+</div>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cohorts.name %>
+</p>
+
+<p>
+  <strong>Start Date:</strong>
+  <%= @cohorts.start_date %>
+</p>
+
+<p>
+  <strong>End Date:</strong>
+  <%= @cohorts.end_date %>
+</p>
+<p>
+  <strong>Instructor ID:</strong>
+  <%= @cohorts.age %>
+</p>
+
+<p>
+  <strong>Student ID:</strong>
+  <%= @cohorts.salary%>
+</p>
+
+
+<div class="buttons">
+  <a href="/cohorts">Cohorts List</a>
+  <%= link_to 'Edit', edit_cohort_path(@cohorts) %>
+  <a href="/cohorts/<%= @cohorts.id %>" data-method="delete">Delete</a>
+</div>
+
+      t.string :name
+      t.date :start_date
+      t.date :end_date
+      t.integer :instructor_id
+      t.integer :student_id
