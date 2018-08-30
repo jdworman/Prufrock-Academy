@@ -14,6 +14,8 @@
 
 <%= f.text_area :bio, placeholder: "Write a quick bio." %><br>
 
+<<% f.collection_select :department_id, @depts, :id, :name, {include_blank: true } %>>
+
 <%= f.submit 'Add Student' %><br>
 <% end %>
  
