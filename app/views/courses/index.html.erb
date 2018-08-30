@@ -1,2 +1,11 @@
-<h1>Courses#index</h1>
-<p>Find me in app/views/courses/index.html.erb</p>
+ 
+<table>
+    <tr>
+        <th>Courses</td>
+    </tr>
+    <% @courses.each do |s| %>
+    <tr>
+        <td><a href="/courses/<%= s.id %>"><%= s.first_name %> <%= s.last_name %></a></td>
+    </tr>
+    <% end %>
+ </table>

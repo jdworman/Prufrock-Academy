@@ -36,6 +36,7 @@ class StudentsController < ApplicationController
     @students.destroy
     respond_to do |format|
       format.html { redirect_to @students }
+       
     end
   end
 
