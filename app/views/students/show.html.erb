@@ -7,27 +7,26 @@
 
 <p>
   <strong>First name:</strong>
-  <%= @student.first_name %>
+  <%= @students.first_name %>
 </p>
 
 <p>
   <strong>Last name:</strong>
-  <%= @student.last_name %>
+  <%= @students.last_name %>
 </p>
 
 <p>
   <strong>Age:</strong>
-  <%= @student.age %>
+  <%= @students.age %>
 </p>
 
 <p>
   <strong>Education:</strong>
-  <%= @student.education %>
+  <%= @students.education %>
 </p>
 
 <div class="buttons">
-  <%= link_to 'Edit', onclick: "location.href='#{edit_student_path(@student)}'", class: "btn btn-info" %>
-  <%= link_to 'Back', onclick: "location.href='#{students_path}'", class: "btn btn-info" %>
-  <%= link_to "Delete", @student, :method => :delete, :confirm => "Are you sure ?"%>
- 
+  <a href="/students">Students List</a>
+  <a href="/edit/<%= @students.id %>">Edit</a>
+  <a href="/students/<%= @students.id %>" onclick="return confirm('Are you sure?')" data-method="delete">Delete</a>
 </div>

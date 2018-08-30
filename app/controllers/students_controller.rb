@@ -1,18 +1,18 @@
 class StudentsController < ApplicationController
   def index
-    @student = Students.all
+    @students = Student.all
   end
 
   def edit
-    @student = Student.find(params[:id])
+    @students = Student.find(params[:id])
   end
 
   def new
-    @student = Student.find(params[:id])
+    @students = Student.find(params[:id])
   end
 
   def show
-    @student = Student.find(params[:id]) 
+    @students = Student.find(params[:id]) 
   end
 
   def create
@@ -23,16 +23,10 @@ class StudentsController < ApplicationController
   end
 
   def destroy
-    @student = Student.find(params[:id])
-    @student.destroy
+    @students = Student.find(params[:id])
+    @students.destroy
     respond_to do |format|
-      
-        format.html { redirect_to @student }
- 
-  def list
-
-      end
-      
+      format.html { redirect_to @students }
     end
   end
 
