@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   root 'pages#index'
   get 'students', to: 'students#index' 
   get 'instructors', to: 'instructors#index'
+  get 'courses', to: 'courses#index'
+  get 'cohorts', to: 'cohorts#index' 
+  get 'pages#index', to: 'sessions#new'
   get 'instructors/index'
   get 'instructors/edit'
   get 'instructors/new'
@@ -30,6 +33,10 @@ Rails.application.routes.draw do
   get 'cohorts/edit'
   get 'cohorts/new'
   get 'cohorts/show'
+
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
 
   resources :students
   resources :instructors
