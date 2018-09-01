@@ -1,0 +1,19 @@
+<ul>
+<% if user_signed_in?%>
+<l1>
+<%= link_to "Sign Out", destroy_user_session_path, method: :delete  %>
+</l1>
+<l1>
+<%= current_user.email %>
+</l1>
+<% else %>
+<l1> 
+<%= link_to "sign in", new_user_session_path %> 
+</l1>
+<l1>
+<% link_to "sign UP", new_user_registration_path %>
+</l1>
+<% end %>
+</ul>
+
+ 

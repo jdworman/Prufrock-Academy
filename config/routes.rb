@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  get 'home/index'
   root 'pages#index'
   get 'students', to: 'students#index' 
   get 'instructors', to: 'instructors#index'
