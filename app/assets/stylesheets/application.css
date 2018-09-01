@@ -18,9 +18,8 @@
 ================================= */
 
  body {
-     background-color: #57222c;
+    background-color: #003664;
     color: #ffd200;
-    background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.7), black), url("images/background.jpeg");
     margin: 0;
     padding: 0;
  }
@@ -46,8 +45,6 @@
 
  .image {
    width: 100%;
-   background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.7), black), url("images/background.jpeg")
-   
  }
 
  
