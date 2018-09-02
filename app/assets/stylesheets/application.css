@@ -26,15 +26,14 @@
 
  h1 {
   font-family: sans-serif;
+  font-size: 214%;
+  text-decoration: underline
   color: #ffd200;
   text-align: center;
   position: relative;
   font-size: 300%;
   display: inline-block;
   text-transform: uppercase;
-    -moz-column-count: 4;
-    -webkit-column-count: 4;
-    column-count: 4;
 }
 
  h6 {
@@ -47,6 +46,11 @@
    width: 100%;
  }
 
+ img {
+    height: 138px;
+    width: 181px;
+    margin: 20px;
+   }
  
  
 /* HeaderBar section
@@ -54,13 +58,13 @@
 
 #headerbar ul {
     background-color:  #ffd200; 
-    padding: 17px;
-    list-style-type: center;
-    text-align: center;
-    background-color: none;
-    margin: 10px;
+    padding: 47px;
+    margin: 0px;
     border-radius: 5px;
-  }
+    top:0;
+    padding-top:0;
+    position:relative;
+   }
   
   #headerbar ul li {
     display: inline;
@@ -84,9 +88,8 @@
 
 #navbar ul {
   padding: 5px;
-  list-style-type: center;
   text-align: center;
-  background-color: none;
+  background-color: white;
   margin: 10px;
   border-radius: 5px;
 }
@@ -99,11 +102,22 @@
   text-decoration: none;
   font-family: Arial;
   padding: .2em 1em;
-  color: #fff;
+  color: black;
   background-color: none;
 }
 
 #navbar ul li a:hover {
   color: none;
-  background-color: #e7a614;
+  background-color: #003664;
+}
+
+/* Logo
+================================= */
+
+.logo {
+  margin-bottom: -230px;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  width: auto;
 }
