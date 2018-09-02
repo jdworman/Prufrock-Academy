@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'pages#index'
   get 'students', to: 'students#index' 
   get 'instructors', to: 'instructors#index'
+  get 'courses', to: 'courses#index'
+  get 'cohorts', to: 'cohorts#index' 
+  get 'principal', to: 'principal#index'
+  get 'contact', to: 'contact#index'
+  get 'pages#index', to: 'sessions#new'
+  get 'home/index'
   get 'instructors/index'
   get 'instructors/edit'
   get 'instructors/new'
@@ -31,9 +38,14 @@ Rails.application.routes.draw do
   get 'cohorts/new'
   get 'cohorts/show'
 
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
+
   resources :students
   resources :instructors
   resources :courses
   resources :cohorts
+  resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
