@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'home/index'
   root 'pages#index'
   get 'students', to: 'students#index' 
   get 'instructors', to: 'instructors#index'
   get 'courses', to: 'courses#index'
   get 'cohorts', to: 'cohorts#index' 
+  get 'principal', to: 'principal#index'
+  get 'contact', to: 'contact#index'
   get 'pages#index', to: 'sessions#new'
+  get 'home/index'
   get 'instructors/index'
   get 'instructors/edit'
   get 'instructors/new'
@@ -44,5 +46,6 @@ Rails.application.routes.draw do
   resources :instructors
   resources :courses
   resources :cohorts
+  resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
