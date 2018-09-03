@@ -55,7 +55,7 @@ a:visited {
 /* Header Bar section
 ================================= */
 
-#headerbar {
+.headerbar {
     background-color:  #ffd200;
     padding: 26px;
     margin: -6px;
@@ -70,8 +70,8 @@ a:visited {
   /* Navigation section
   ================================= */
 
-  #navbar ul {
-    padding: 5px 0px 0px 0px;
+  .navbar ul {
+    padding: 10px 20px 10px 20px;
     margin: 0px 0px 0px 0px;
     list-style-type: center;
     text-align: center;
@@ -80,11 +80,11 @@ a:visited {
     border-radius: 5px;
   }
 
-  #navbar ul li {
+  .navbar ul li {
     display: inline;
   }
 
-  #navbar ul li a {
+  .navbar ul li a {
     text-decoration: none;
     font-family: Arial;
     padding: .2em 1em;
@@ -92,7 +92,7 @@ a:visited {
     background-color: none;
   }
 
-  #navbar ul li a:hover {
+  .navbar ul li a:hover {
     color: none;
     background-color: #003b6e;
   }
@@ -113,4 +113,9 @@ a:visited {
    justify-content: left;
    height: 200px;
    width: auto;
+ }
+
+ .school {
+   margin: 62px 0px 0px 210px;
+   padding: 0px 0px 0px 0px;
  }

@@ -10,13 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_30_200142) do
-
-  create_table "admin_users_pages", id: false, force: :cascade do |t|
-    t.integer "admin_user_id"
-    t.integer "page_id"
-    t.index ["admin_user_id", "page_id"], name: "index_admin_users_pages_on_admin_user_id_and_page_id"
-  end
+ActiveRecord::Schema.define(version: 2018_08_30_163710) do
 
   create_table "cohorts", force: :cascade do |t|
     t.string "name"
@@ -52,15 +46,6 @@ ActiveRecord::Schema.define(version: 2018_08_30_200142) do
     t.string "email"
     t.integer "age"
     t.string "education"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "first_name", limit: 25
-    t.string "last_name", limit: 50
-    t.string "email", default: "", null: false
-    t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

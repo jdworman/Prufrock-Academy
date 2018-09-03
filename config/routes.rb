@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root 'pages#index'
-  get 'students', to: 'students#index' 
+  get 'students', to: 'students#index'
   get 'instructors', to: 'instructors#index'
+  get 'principal', to: 'principal#index'
+  get 'sports', to: 'sports#index'
+  get 'about', to: 'about#index'
   get 'instructors/index'
   get 'instructors/edit'
   get 'instructors/new'
