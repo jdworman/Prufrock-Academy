@@ -76,21 +76,13 @@ a:visited {
     text-align: center;
  }
 
-
- img {
-    height: 138px;
-    width: 181px;
-    margin: 20px;
-   }
-
-
 /* HeaderBar section
 ================================= */
 
 #headerbar ul {
     background-color:  #ffd200;
     padding: 47px;
-    margin: 0px;
+    margin: 177px;
     border-radius: 5px;
     top:0;
     padding-top:0;
@@ -103,7 +95,7 @@ a:visited {
   padding: 5px;
   text-align: center;
   background-color: white;
-  margin: 10px;
+  margin: 237px -6px 162px 25px;
   border-radius: 5px;
 }
 
@@ -124,36 +116,6 @@ a:visited {
   background-color: #003664;
 }
 
-  /* Navigation section
-  ================================= */
-
-  #navbar ul {
-    padding: 5px 0px 0px 0px;
-    margin: 0px 0px 0px 0px;
-    list-style-type: center;
-    text-align: center;
-    background-color: #fff;
-    margin: 200px;
-    border-radius: 5px;
-  }
-
-  #navbar ul li {
-    display: inline;
-  }
-
-  #navbar ul li a {
-    text-decoration: none;
-    font-family: Arial;
-    padding: .2em 1em;
-    color: blue ;
-    background-color: none;
-  }
-
-  #navbar ul li a:hover {
-    color: none;
-    background-color: #003b6e;
-  }
-
   /* Images
  ================================= */
 .logo {
@@ -171,4 +133,8 @@ a:visited {
    height: 200px;
    width: auto;
  }
- 
+
+.school {
+    margin: 102px 14px 1700px 200px;
+    display: flex;
+  }
