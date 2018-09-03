@@ -20,6 +20,8 @@
  body {
     background-color: #003b6e;
     color: #ffd200;
+    position: fixed;
+    z-index: 5;
     margin: 0;
     padding: 0;
  }
@@ -55,11 +57,11 @@ a:visited {
 
 #headerbar {
     background-color:  #ffd200;
-    padding: 17px;
+    padding: 26px;
+    margin: -6px;
+    margin-right: -240px;
     list-style-type: center;
     text-align: center;
-    background-color: none;
-    margin: 10px;
     border-radius: 5px;
   }
 
@@ -69,7 +71,8 @@ a:visited {
   ================================= */
 
   #navbar ul {
-    padding: 5px;
+    padding: 5px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
     list-style-type: center;
     text-align: center;
     background-color: #fff;
@@ -105,7 +108,7 @@ a:visited {
 }
 
  .lion {
-   margin: -389px 0px -187px 157px;
+   margin: -405px 0px -136px 167px;
    display: flex;
    justify-content: left;
    height: 200px;
