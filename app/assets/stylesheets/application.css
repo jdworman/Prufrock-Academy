@@ -18,9 +18,8 @@
 ================================= */
 
  body {
-     background-color: #57222c;
+    background-color: #003b6e;
     color: #ffd200;
-    background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.7), black), url("images/background.jpeg");
     margin: 0;
     padding: 0;
  }
@@ -29,13 +28,11 @@
   font-family: sans-serif;
   color: #ffd200;
   text-align: center;
+  margin: 35px 0px 0px 116px;
   position: relative;
-  font-size: 300%;
+  font-size: 20px;
   display: inline-block;
   text-transform: uppercase;
-    -moz-column-count: 4;
-    -webkit-column-count: 4;
-    column-count: 4;
 }
 
  h6 {
@@ -44,18 +41,20 @@
      text-align: center;
  }
 
- .image {
-   width: 100%;
-   
- }
+ a {
+  color: #fff;
+}
 
- 
- 
-/* Navigation section
+a:visited {
+  color: #fff;
+}
+
+
+/* Header Bar section
 ================================= */
 
-#navbar ul {
-    background-color:  #ffd200; 
+#headerbar {
+    background-color:  #ffd200;
     padding: 17px;
     list-style-type: center;
     text-align: center;
@@ -63,20 +62,52 @@
     margin: 10px;
     border-radius: 5px;
   }
-  
+
+
+
+  /* Navigation section
+  ================================= */
+
+  #navbar ul {
+    padding: 5px;
+    list-style-type: center;
+    text-align: center;
+    background-color: #fff;
+    margin: 200px;
+    border-radius: 5px;
+  }
+
   #navbar ul li {
     display: inline;
   }
-  
+
   #navbar ul li a {
     text-decoration: none;
     font-family: Arial;
     padding: .2em 1em;
-    color: #fff;
+    color: blue ;
     background-color: none;
   }
-  
+
   #navbar ul li a:hover {
     color: none;
-    background-color: #e7a614;
+    background-color: #003b6e;
   }
+
+  /* Images
+ ================================= */
+.logo {
+  margin-bottom: -230px;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  width: auto;
+}
+
+ .lion {
+   margin: -389px 0px -187px 157px;
+   display: flex;
+   justify-content: left;
+   height: 200px;
+   width: auto;
+ }
