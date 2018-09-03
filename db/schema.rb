@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 2018_08_30_200142) do
   create_table "courses", force: :cascade do |t|
     t.string "name"
     t.integer "hours"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "instructors", force: :cascade do |t|
@@ -55,6 +57,10 @@ ActiveRecord::Schema.define(version: 2018_08_30_200142) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "first_name", limit: 25
+    t.string "last_name", limit: 50
+    t.string "email", default: "", null: false
+    t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
