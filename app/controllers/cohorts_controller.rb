@@ -11,14 +11,17 @@ class CohortsController < ApplicationController
   end
 
   def show
-    @cohorts = Cohort.find(params[:id]) 
+    @cohorts = Cohort.find(params[:id])
   end
 
   def create
-    @cohorts = Cohort.new(params.require(:cohorts).permit(:first_name, :last_name, :email, :age, :education))
- 
-    @cohorts.save
+    @cohorts = Cohort.new(params.require(:cohorts).permit(:first_name, :last_name, :age, :education))
+  if @cohorts.save
     redirect_to @cohorts
+  else
+    errors = @cohorts.errors.full_messages
+    flash.now[:error] = errors
+    render 'new'
   end
 
   def update
@@ -36,7 +39,7 @@ class CohortsController < ApplicationController
     @cohorts.destroy
     respond_to do |format|
       format.html { redirect_to @cohorts }
-       
+
     end
   end
 
