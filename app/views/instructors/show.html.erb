@@ -15,10 +15,6 @@
 </p>
 
 <p>
-  <strong>Email:</strong>
-  <%= @instructors.email %>
-</p>
-<p>
   <strong>Age:</strong>
   <%= @instructors.age %>
 </p>
@@ -34,8 +30,7 @@
 </p>
 
 <div class="buttons">
-  <a href="/instructors">Students List</a>
+  <a href="/instructors">Instructors List</a>
   <%= link_to 'Edit', edit_instructor_path(@instructors) %>
   <a href="/instructorss/<%= @instructors.id %>" data-method="delete">Delete</a>
 </div>
-

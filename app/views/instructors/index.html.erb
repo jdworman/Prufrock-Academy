@@ -1,11 +1,16 @@
- 
 <table>
+  <tr>
+    <th>
+      <h2>Instructors</h2>
+    </td>
+  </tr>
+  <% @instructors.each do |s| %>
     <tr>
-        <th><h2>Instructors</h2></td>
+      <td>
+        <a href="/instructors/<%= s.id %>"><%= s.first_name %>
+          <%= s.last_name %></a>
+      </td>
     </tr>
-    <% @instructors.each do |s| %>
-    <tr>
-        <td><a href="/instructors/<%= s.id %>"><%= s.first_name %> <%= s.last_name %></a></td>
-    </tr>
-    <% end %>
- </table>
+  <% end %>
+  <a href="/instructors/new/">Create a new Instructor</a>
+</table>

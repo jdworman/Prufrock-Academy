@@ -3,17 +3,10 @@
 
 <%= form_with scope: :students, url: students_path, local: true do |f| %>
 
-<%= f.text_field :last_name, placeholder: "Last Name"%><br> 
-<%= f.text_field :first_name, placeholder: "First Name" %><br> 
- <%= f.text_field :email, placeholder: "Email Address" %><br> 
- <%= f.number_field :age, placeholder: "Age" %><br> 
- <%= f.select :education, ['HS', 'College', 'Masters', 'PHD'] %><br> 
-<%= f.label :photo, "Enter your photo."  %><br>
-
-<%= f.file_field :photo %><br>
-
-<%= f.text_area :bio, placeholder: "Write a quick bio." %><br>
+<%= f.text_field :last_name, placeholder: "Last Name"%><br>
+<%= f.text_field :first_name, placeholder: "First Name" %><br>
+ <%= f.number_field :age, placeholder: "Age" %><br>
+ <%= f.select :education, ['HS', 'College', 'Masters', 'PHD'], :include_blank => true %><br>
 
 <%= f.submit 'Add Student' %><br>
 <% end %>
- 
