@@ -1,11 +1,11 @@
- 
 <table>
     <tr>
         <th>Cohorts</td>
     </tr>
     <% @cohorts.each do |s| %>
     <tr>
-        <td><a href="/cohorts/<%= s.id %>"><%= s.first_name %> <%= s.last_name %></a></td>
+        <td><a href="/cohorts/<%= s.id %>"><%= s.name %> </a></td>
     </tr>
     <% end %>
- </table>
+        <a href="/cohorts/new/">Create a new Cohort</a>
+  </table>

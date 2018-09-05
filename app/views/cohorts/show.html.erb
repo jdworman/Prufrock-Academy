@@ -20,24 +20,17 @@
 </p>
 <p>
   <strong>Instructor ID:</strong>
-  <%= @cohorts.age %>
+  <%= @cohorts.instructor_id %>
 </p>
 
 <p>
   <strong>Student ID:</strong>
-  <%= @cohorts.salary%>
+  <%= @cohorts.student_id%>
 </p>
 
 
 <div class="buttons">
   <a href="/cohorts">Cohorts List</a>
   <%= link_to 'Edit', edit_cohort_path(@cohorts) %>
-  <a href="/cohorts/new/">Create a new Cohort</a>
   <a href="/cohorts/<%= @cohorts.id %>" data-method="delete">Delete</a>
 </div>
-
-      t.string :name
-      t.date :start_date
-      t.date :end_date
-      t.integer :instructor_id
-      t.integer :student_id
