@@ -1,16 +1,17 @@
 <table>
-        <tr>
-          <th>Cohorts</td>
-        </tr>
-        <% @cohorts.each do |s| %>
-          <tr>
-            <td>
-             <a href="/cohorts/<%= s.id %>"><%= s.name %>
-              </a>
-            </td>
-          </tr>
-        <% end %>
-        <a href="/cohorts/new/">Create a new Cohort</a>
-      </table>
-    </a>
-   
+  <tr>
+    <th>
+      <h4>Cohorts</h4>
+    </td>
+  </tr>
+  <% @cohorts.each do |s| %>
+    <tr>
+      <td>
+      <a href="/cohorts/<%= s.id %>"><%= s.name %>
+      </td>
+    </tr>
+
+  <% end %>
+  <a href="/cohorts/new/">Create a new Student</a>
+</table>
+</a>

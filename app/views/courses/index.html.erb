@@ -1,20 +1,24 @@
+<table>
+  <tr>
+    <th>
+      <h4>Courses</h4>
+    </td>
+  </tr>
+  <% @courses.each do |s| %>
+    <tr>
+      <td>
+<a href="/courses/<%= s.id %>"><%= s.name %></a>
+      </td>
+    </tr>
 
-      <table>
-        <tr>
-          <th>
-            <h4>Courses</h4>
-          </td>
-        </tr>
-        <% @courses.each do |s| %>
-          <tr>
-            <tr>
-              <td>
-                <a href="/courses/<%= s.id %>"><%= s.name %></a>
-              </td>
-            </tr>
-          <% end %>
+  <% end %>
+  <a href="/courses/new/">Create a new Course</a>
+</table>
+</a>
 
-      <a href="/courses/new/">Create a new Course</a>
-    </table>
-  </a>
+
+
+
+
+
  
