@@ -12,7 +12,7 @@
   <header class="adminheader">
     <a href="#" class="symbolheader">
       <h1>Dashboard</h1>
-      
+
     </a>
     <div class="toolbar">
       <button class="btn btn--primary">Add New Students</button>
@@ -41,6 +41,9 @@
           </li>
         </ul>
       </nav>
+      <div class="adminmain">
+             <%= yield %>
+      </div>
       <footer class="adminfooter">
     <ul class="ticker">
       <li class="tickeritem">BTC: +3.12%</li>
@@ -56,7 +59,7 @@
   </footer>
 </div>
 
-         <%= yield %>
+
 
             <p class="notice"><%= notice %></p>
             <p class="alert"><%= alert %></p>
