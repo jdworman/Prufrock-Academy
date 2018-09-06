@@ -1,3 +1,167 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* Body section
+================================= */
+
+html, body {
+  background-color: #003664;
+  color: #ffd200;
+  z-index: 5;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: white;
+  margin: 40px;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: sans-serif;
+  font-size: 50px;
+  text-decoration: underline;
+  color: #ffd200;
+  text-align: center;
+  margin: 35px 0px 0px 116px;
+  position: relative;
+  margin: 40px;
+  margin-left: 240px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: sans-serif;
+  font-size: 30px;
+  text-decoration: underline;
+  color: #ffd200;
+  text-align: center;
+  position: relative;
+  margin-left: 653px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+h3 {
+  margin: 101px 0px 0px 600px;
+  font-family: sans-serif;
+  font-size: 30px;
+  text-decoration: underline;
+  color: #ffd200;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+h4 {
+  margin: 20px -900px 0px 0px;
+  color: #ffd200;
+  font-size: 50px;
+}
+
+td a {
+  color: #ffd200;
+  font-size: 20px;
+}
+
+a:visited {
+  color: #fff;
+}
+
+/* Header Bar section
+================================= */
+
+#headerbar {
+  background-color: #ffd200;
+  padding: 26px;
+  margin: -6px;
+  margin-right: -240px;
+  list-style-type: center;
+  text-align: center;
+}
+
+/* HeaderBar section
+================================= */
+
+#headerbar ul {
+  background-color: #ffd200;
+  padding: 47px;
+  margin: 177px;
+  border-radius: 5px;
+  top: 0;
+  padding-top: 0;
+}
+
+/* Navigation section
+================================= */
+
+#navbar ul {
+  padding: 15px;
+  text-align: center;
+  background-color: white;
+  margin: 214px -200px 164px -200px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 20
+}
+
+#navbar ul li {
+  display: inline;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  font-family: Arial;
+  padding: .2em 1em;
+  color: black;
+  background-color: none;
+}
+
+#navbar ul li a:hover {
+  color: white;
+  background-color: #003664;
+}
+
+/* Images
+ ================================= */
+
+.logo {
+  margin-bottom: -230px;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  width: auto;
+}
+
+.lion {
+  margin: -407px 700px 228px -221px;
+  display: flex;
+  justify-content: left;
+  height: 189px;
+  width: 100px;
+}
+
+.school {
+  margin: -165px -26px 1680px 72px;
+  display: flex;
+}
+
+.slogan {
+  display: flex;
+  position: relative;
+}
+
+.Prufrock {
+  display: flex;
+  margin: -400px -200px 0 -380px;
+}
