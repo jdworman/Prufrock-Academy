@@ -1,47 +1,48 @@
 class CoursesController < ApplicationController
   def index
-    @courses = Course.all
-  end
+  @courses = Course.all
+end
 
-  def edit
-    @courses = Course.find(params[:id])
-  end
+def edit
+  @course= Course.find(params[:id])
+end
 
-  def new
-  end
+def new
+  @course= Course.new
+end
 
-  def show
-    @courses = Course.find(params[:id])
-  end
+def show
+  @course= Course.find(params[:id])
+end
 
-  def create
-    @courses = Course.new(params.require(:courses).permit(:first_name, :last_name, :age, :education))
-  if @courses.save
-    redirect_to @courses
+
+def create
+  @course = Course.new(params.require(:course).permit(:name, :hours))
+if @course.save
+  redirect_to @course
+else
+  errors = @course.errors.full_messages
+  flash.now[:error] = errors
+  render 'new'
+end
+end
+
+def update
+  @course = Course.find(params[:id])
+
+  if @course.update(params.require(:course).permit(:name, :hours))
+    redirect_to @course
   else
-    errors = @courses.errors.full_messages
-    flash.now[:error] = errors
-    render 'new'
+    render 'edit'
   end
- end
+end
 
-  def update
-    @courses = Course.find(params[:id])
+def destroy
+@coursedestroy
+respond_to do |format|
+  format.html { redirect_to course, notice: 'STUDENT HAS BEEN DELETED!' }
+end
 
-    if @courses.update(params.require(:student).permit(:first_name, :last_name, :email, :age, :education))
-      redirect_to @courses
-    else
-      render 'edit'
-    end
-  end
 
-  def destroy
-    @courses = Course.find(params[:id])
-    @courses.destroy
-    respond_to do |format|
-      format.html { redirect_to @courses }
-
-    end
-  end
-
+end
 end

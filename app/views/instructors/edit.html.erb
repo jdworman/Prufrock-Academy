@@ -1,12 +1,12 @@
 <h1>Edit Instructor</h1>
 
-<%= form_with(model: @instructors, local: true) do |f| %>
+<%= form_with(model: @instructor, local: true) do |f| %>
 
 <%= f.text_field :last_name, placeholder: "Last Name"%><br>
 <%= f.text_field :first_name, placeholder: "First Name" %><br>
- <%= f.number_field :age, placeholder: "Age" %><br>
- <%= f.number_field :salary, placeholder: "Salary"  %><br>
-  <%= f.select :education, ['HS', 'College', 'Masters', 'PHD'], :include_blank => true %><br>
+<%= f.number_field :age, placeholder: "Age" %><br>
+<%= f.number_field :salary, placeholder: "Salary" %><br>
+<%= f.select :education, ['HS', 'College', 'Masters', 'PHD'], :include_blank => true %><br>
 
 <%= f.submit 'Edit Instructor' %><br>
 <% end %>

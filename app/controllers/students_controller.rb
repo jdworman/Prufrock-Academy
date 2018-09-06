@@ -4,44 +4,45 @@ class StudentsController < ApplicationController
   end
 
   def edit
-    @students = Student.find(params[:id])
+    @student = Student.find(params[:id])
   end
 
   def new
+    @student = Student.new
   end
 
   def show
-    @students = Student.find(params[:id])
+    @student = Student.find(params[:id])
   end
 
   def create
-    @students = Student.new(params.require(:students).permit(:first_name, :last_name, :age, :education))
-  if @students.save
-    redirect_to @students
+    @student = Student.new(params.require(:student).permit(:first_name, :last_name, :age, :education))
+  if @student.save
+    redirect_to @student
   else
-    errors = @students.errors.full_messages
+    errors = @student.errors.full_messages
     flash.now[:error] = errors
     render 'new'
   end
  end
 
   def update
-    @students = Student.find(params[:id])
+    @student = Student.find(params[:id])
 
-    if @students.update(params.require(:student).permit(:first_name, :last_name, :email, :age, :education))
-      redirect_to @students
+    if @student.update(params.require(:student).permit(:first_name, :last_name, :email, :age, :education))
+      redirect_to @student
     else
       render 'edit'
     end
   end
 
   def destroy
-    @students = Student.find(params[:id])
-    @students.destroy
-    respond_to do |format|
-      format.html { redirect_to @students }
+  @student.destroy
+  respond_to do |format|
+    format.html { redirect_to students_url, notice: 'STUDENT HAS BEEN DELETED!' }
+  end
 
-    end
+
   end
 
 end

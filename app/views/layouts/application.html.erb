@@ -9,61 +9,59 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <div class="admin">
-  <header class="adminheader">
-    <a href="#" class="symbolheader">
-      <h1>ADMIN PANEL</h1>
+    <header class="adminheader">
+      <a href="#" class="symbolheader">
+        <!-- <h1>ADMIN PANEL</h1> -->
 
-    </a>
-    <div class="toolbar">
-      <button class="btn btn--primary">Add New Students</button>
-      <a href="#" class="logout">
-        Log Out
       </a>
-    </div>
-  </header>
-  <nav class="adminnav">
-    <ul class="sidebar">
-      <li class="sidebar__item">
-            <a class="sidebar__link" href="/">Home</a>
-          </li>
-          <li class="sidebar__item">
-            <%= link_to 'STUDENTS', students_path, :class => "sidebar__link" %>
-          </li>
-          <li class="sidebar__item">
-            <%= link_to 'INSTRUCTORS', instructors_path, :class => "sidebar__link" %>
-          </li>
-          <li class="sidebar__item">
-            <%= link_to 'COURSES', courses_path, :class => "sidebar__link" %>
-          </li>
-          <li class="sidebar__item">
-            <%= link_to 'COHORTS', cohorts_path, :class => "sidebar__link" %>
-
-          </li>
-        </ul>
-      </nav>
-      <div class="adminmain">
-             <%= yield %>
+      <div class="toolbar">
+        <button class="btn btn--primary">Add New Students</button>
+        <a href="#" class="logout">
+          Log Out
+        </a>
       </div>
-      <footer class="adminfooter">
-    <ul class="ticker">
-      <li class="tickeritem">BTC: +3.12%</li>
-      <li class="tickeritem">ETH: +1.29%</li>
-      <li class="tickeritem">XRP: -0.32%</li>
-      <li class="tickeritem">BCH: -2.82%</li>
-      <li class="tickeritem">EOS: +1.44%</li>
-      <li class="tickeritem">CSS: +13.37%</li>
-    </ul>
-    <span>
-      &copy; 2018 Prufrock Prepatory Academy
-    </span>
-  </footer>
-</div>
+    </header>
+    <nav class="adminnav">
+      <ul class="sidebar">
+        <li class="sidebar__item">
+          <a class="sidebar__link" href="/">Home</a>
+        </li>
+        <li class="sidebar__item">
+          <%= link_to 'STUDENTS', students_path, :class => "sidebar__link" %>
+        </li>
+        <li class="sidebar__item">
+          <%= link_to 'INSTRUCTORS', instructors_path, :class => "sidebar__link" %>
+        </li>
+        <li class="sidebar__item">
+          <%= link_to 'COURSES', courses_path, :class => "sidebar__link" %>
+        </li>
+        <li class="sidebar__item">
+          <%= link_to 'COHORTS', cohorts_path, :class => "sidebar__link" %>
 
+        </li>
+      </ul>
+    </nav>
+    <div class="adminmain">
+      <%= yield %>
+    </div>
+    <footer class="adminfooter">
+      <ul class="ticker">
+        <li class="tickeritem">BTC: +3.12%</li>
+        <li class="tickeritem">ETH: +1.29%</li>
+        <li class="tickeritem">XRP: -0.32%</li>
+        <li class="tickeritem">BCH: -2.82%</li>
+        <li class="tickeritem">EOS: +1.44%</li>
+        <li class="tickeritem">CSS: +13.37%</li>
+      </ul>
+      <span>
+        &copy; 2018 Prufrock Prepatory Academy
+      </span>
+    </footer>
+  </div>
 
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
-            <p class="notice"><%= notice %></p>
-            <p class="alert"><%= alert %></p>
-
-            <script src="application.js"></script>
-          </body>
-        </html>
+  <script src="application.js"></script>
+</body>
+</html>

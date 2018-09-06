@@ -6,31 +6,30 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @cohorts.name %>
+  <%= @cohort.name %>
 </p>
 
 <p>
   <strong>Start Date:</strong>
-  <%= @cohorts.start_date %>
+  <%= @cohort.start_date %>
 </p>
 
 <p>
   <strong>End Date:</strong>
-  <%= @cohorts.end_date %>
+  <%= @cohort.end_date %>
 </p>
 <p>
   <strong>Instructor ID:</strong>
-  <%= @cohorts.instructor_id %>
+  <%= @cohort.instructor_id %>
 </p>
 
 <p>
   <strong>Student ID:</strong>
-  <%= @cohorts.student_id%>
+  <%= @cohort.student_id%>
 </p>
 
-
 <div class="buttons">
-  <a href="/cohorts">Cohorts List</a>
-  <%= link_to 'Edit', edit_cohort_path(@cohorts) %>
-  <a href="/cohorts/<%= @cohorts.id %>" data-method="delete">Delete</a>
+  <%= link_to 'List', cohorts_path %>
+  <%= link_to 'Edit', edit_cohort_path %>
+  <%= link_to 'Delete', cohorts_path, data: {:confirm => 'Are you sure?'}, :method => :delete %>
 </div>

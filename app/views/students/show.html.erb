@@ -6,26 +6,26 @@
 
 <p>
   <strong>First Name:</strong>
-  <%= @students.first_name %>
+  <%= @student.first_name %>
 </p>
 
 <p>
   <strong>Last Name:</strong>
-  <%= @students.last_name %>
+  <%= @student.last_name %>
 </p>
 
 <p>
   <strong>Age:</strong>
-  <%= @students.age %>
+  <%= @student.age %>
 </p>
 
 <p>
   <strong>Education:</strong>
-  <%= @students.education %>
+  <%= @student.education %>
 </p>
 
 <div class="buttons">
-  <a href="/students">Students List</a>
-  <%= link_to 'Edit', edit_student_path(@students) %>
-  <a href="/students/<%= @students.id %>" data-method="delete">Delete</a>
+  <%= link_to 'List', students_path %>
+  <%= link_to 'Edit', edit_student_path %>
+  <%= link_to 'Delete', students_path, data: {:confirm => 'Are you sure?'}, :method => :delete %>
 </div>

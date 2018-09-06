@@ -4,44 +4,45 @@ class CohortsController < ApplicationController
   end
 
   def edit
-    @cohorts = Cohort.find(params[:id])
+    @cohort= Cohort.find(params[:id])
   end
 
   def new
+    @cohort= Cohort.new
   end
 
   def show
-    @cohorts = Cohort.find(params[:id])
+    @cohort= Cohort.find(params[:id])
   end
 
   def create
-    @cohorts = Cohort.new(params.require(:cohorts).permit(:first_name, :last_name, :age, :education))
-  if @cohorts.save
-    redirect_to @cohorts
+    @cohort = Cohort.new(params.require(:cohort).permit(:name, :start_date, :end_date, :student_id, :instructor_id))
+  if @cohort.save
+    redirect_to @cohort
   else
-    errors = @cohorts.errors.full_messages
+    errors = @cohort.errors.full_messages
     flash.now[:error] = errors
     render 'new'
   end
  end
 
   def update
-    @cohorts = Cohort.find(params[:id])
+    @cohort = Cohort.find(params[:id])
 
-    if @cohorts.update(params.require(:student).permit(:first_name, :last_name, :email, :age, :education))
-      redirect_to @cohorts
+    if @cohort.update(params.require(:cohort).permit(:name, :start_date, :end_date, :student_id, :instructor_id))
+      redirect_to @cohort
     else
       render 'edit'
     end
   end
 
   def destroy
-    @cohorts = Cohort.find(params[:id])
-    @cohorts.destroy
-    respond_to do |format|
-      format.html { redirect_to @cohorts }
+  @cohortdestroy
+  respond_to do |format|
+    format.html { redirect_to cohort_url, notice: 'STUDENT HAS BEEN DELETED!' }
+  end
 
-    end
+
   end
 
 end

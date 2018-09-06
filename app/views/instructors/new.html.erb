@@ -1,12 +1,12 @@
 <h1>Add New Instructor</h1>
 
-<%= form_with scope: :instructors, url: instructors_path, local: true do |f| %>
+<%= form_for(@instructor) do |f| %>
 
 <%= f.text_field :last_name, placeholder: "Last Name"%><br>
 <%= f.text_field :first_name, placeholder: "First Name" %><br>
 <%= f.number_field :age, placeholder: "Age" %><br>
-<%= f.number_field :salary, placeholder: "Salary"  %><br>
+<%= f.number_field :salary, placeholder: "Salary" %><br>
 <%= f.select :education, ['HS', 'College', 'Masters', 'PHD'], :include_blank => true %><br>
 
-<%= f.submit 'Add Instructor' %><br>
+<%= f.submit 'Add an Instructor' %><br>
 <% end %>
