@@ -1,4 +1,2 @@
 class Page < ApplicationRecord
-
-
   end

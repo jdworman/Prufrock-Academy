@@ -1,22 +1,29 @@
 class SessionsController < ApplicationController
-  def new; end
+  skip_before_action :require_valid_user!, except: [:destroy]
+
+  def new
+      render layout: false
+  end
 
   def create
-    user = User.find_by(email: params[:session][:email].downcase)
-    if user && user.authenticate(params[:session][:password])
-      log_in(user)
+    reset_session
+    @user = User.find_by(email: session_params[:email])
+
+    if @user && @user.authenticate(session_params[:password])
+      session[:user_id] = @user.id
+      flash[:success] = 'Welcome back!'
       redirect_to root_path
     else
-      msg = 'Either your username or password you entered were incorrect!'
-      p msg
-      render 'new'
+      flash[:error] = 'Invalid email/password combination'
+      redirect_to login_path
     end
   end
 
   def destroy
-    session[:user_id] = nil
-    log_out if logged_in?
-    p 'Logged out successfully'
-    redirect_to root_path
+    reset_session
   end
+
+  def session_params
+    params.require(:session).permit(:email, :password)
   end
+end
