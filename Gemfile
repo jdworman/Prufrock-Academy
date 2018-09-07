@@ -14,7 +14,7 @@ gem 'pg'
 end
 
 
-
+gem 'rollbar'
 
 
 
