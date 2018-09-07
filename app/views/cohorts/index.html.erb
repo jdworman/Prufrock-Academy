@@ -1,17 +1,25 @@
-<table>
-  <tr>
-    <th>
-      <h4>Cohorts</h4>
-    </td>
-  </tr>
-  <% @cohorts.each do |cohort| %>
-    <tr>
-      <td>
-        <a href="/cohorts/<%= cohort.id %>"><%= cohort.name %>
-        </td>
-      </tr>
-
+<h1>Cohorts</h1>
+<div class="divTable">
+  <div class="divTableBody">
+    <div class="divTableRow">
+      <div class="divTableHead" style="width: 150px">Course Name</div>
+      <div class="divTableHead" style="width: 150px">Start Date</div>
+      <div class="divTableHead" style="width: 150px">End Date</div>
+      <div class="divTableHead" style="width: 150px">Student ID</div>
+      <div class="divTableHead" style="width: 150px">Instructor ID</div>
+    </div>
+    <% @cohorts.each do |cohort| %>
+      <div class="divTableRow">
+        <div class="divTableCell" style="width: 150px">
+          <a href="/cohorts/<%= cohort.id %>"><%= cohort.name %></a>
+        </div>
+        <div class="divTableCell" style="width: 150px"><%= cohort.start_date %></div>
+        <div class="divTableCell" style="width: 150px"><%= cohort.end_date %></div>
+        <div class="divTableCell" style="width: 150px"><%= cohort.student_id %></div>
+        <div class="divTableCell" style="width: 150px"><%= cohort.instructor_id %></div>
+      </div>
     <% end %>
-    <a href="/cohorts/new/">Create a new Cohort</a>
-  </table>
-</a>
+  </div>
+</div>
+
+ 

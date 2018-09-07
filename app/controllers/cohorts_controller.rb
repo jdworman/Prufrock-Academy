@@ -37,9 +37,10 @@ class CohortsController < ApplicationController
   end
 
   def destroy
-  @cohortdestroy
-  respond_to do |format|
-    format.html { redirect_to cohort_url, notice: 'STUDENT HAS BEEN DELETED!' }
+    @cohort = Cohort.find(params[:id])
+    @cohort.destroy
+    respond_to do |format|
+      format.html { redirect_to cohorts_path, notice: 'THE COHORT HAS BEEN DELETED!' }
   end
 
 

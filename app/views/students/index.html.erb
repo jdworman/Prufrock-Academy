@@ -1,18 +1,22 @@
-<table>
-  <tr>
-    <th>
-      <h4>Students</h4>
-    </td>
-  </tr>
-  <% @students.each do |student| %>
-    <tr>
-      <td>
-        <a href="/students/<%= student.id %>"><%= student.first_name %>
-          <%= student.last_name %></a>
-      </td>
-    </tr>
-
-  <% end %>
-  <a href="/students/new/">Create a new Student</a>
-</table>
-</a>
+<h1>Students</h1>
+<div class="divTable">
+  <div class="divTableBody">
+    <div class="divTableRow">
+      <div class="divTableHead" style="width: 150px">First Name</div>
+      <div class="divTableHead" style="width: 150px">Last Name</div>
+      <div class="divTableHead">Age</div>
+      <div class="divTableHead">Education</div>
+    </div>
+    <% @students.each do |student| %>
+      <div class="divTableRow">
+        <div class="divTableCell" style="width: 150px"><a href="/students/<%= student.id %>"><%= student.first_name %></a></div>
+        <div class="divTableCell" style="width: 150px"><a href="/students/<%= student.id %>"><%= student.last_name %></a></div>
+        <div class="divTableCell"><%= student.age %></div>
+        <div class="divTableCell"><%= student.education %></div>
+      </div>
+    <% end %>
+    <div class="buttons"><br><br>
+      <%= link_to 'Create a Student', new_student_path %>
+    </div>
+  </div>
+</div>

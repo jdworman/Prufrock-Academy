@@ -2,10 +2,17 @@
 
 <%= form_with(model: @student, local: true) do |f| %>
 
-<%= f.text_field :last_name, placeholder: "Last Name"%><br>
 <%= f.text_field :first_name, placeholder: "First Name" %><br>
+<%= f.text_field :last_name, placeholder: "Last Name"%><br>
 <%= f.number_field :age, placeholder: "Age" %><br>
-<%= f.select :education, ['HS', 'College', 'Masters', 'PHD'], :include_blank => true %><br>
+<%= f.select :education, ['HS', 'College', 'Masters', 'PHD'], :include_blank => true %><br><br>
 
- 
+<%= f.submit 'Edit Student' %>
+
 <% end %>
+
+<div class="buttons">
+  <%= link_to 'List', students_path %>
+  <%= link_to 'Create a Student', new_student_path %>
+  <%= link_to 'Delete', student_path, data: {:confirm => 'Are you sure?'}, :method => :delete %>
+</div>

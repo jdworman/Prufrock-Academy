@@ -20,9 +20,19 @@ html, body {
 }
 
 a {
-  color: white;
+  color: black;
   margin: 40px;
   text-decoration: none;
+}
+
+td a {
+  color: black;
+  font-size: 20px;
+}
+
+a:visited, td a {
+  color: black;
+  font-size: 20px;
 }
 
 h1 {
@@ -67,15 +77,6 @@ h4 {
   margin: 20px -900px 0px 0px;
   color: #ffd200;
   font-size: 50px;
-}
-
-td a {
-  color: black;
-  font-size: 20px;
-}
-
-a:visited {
-  color: black;
 }
 
 /* Header Bar section

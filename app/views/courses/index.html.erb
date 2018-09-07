@@ -1,17 +1,15 @@
-<table>
-  <tr>
-    <th>
-      <h4>Courses</h4>
-    </td>
-  </tr>
-  <% @courses.each do |course| %>
-    <tr>
-      <td>
-        <a href="/courses/<%= course.id %>"><%= course.name %></a>
-      </td>
-    </tr>
-
-  <% end %>
-  <a href="/courses/new/">Create a new Course</a>
-</table>
-</a>
+<h1>Courses</h1>
+<div class="divTable">
+  <div class="divTableBody">
+    <div class="divTableRow">
+      <div class="divTableHead" style="width: 150px">Course Name</div>
+      <div class="divTableHead" style="width: 150px">Course Hours</div>
+    </div>
+    <% @courses.each do |course| %>
+      <div class="divTableRow">
+        <div class="divTableCell" style="width: 150px"><a href="/courses/<%= course.id %>"><%= course.name %></a></div>
+        <div class="divTableCell" style="width: 150px"><%= course.hours %></a></div>
+      </div>
+    <% end %>
+  </div>
+</div>

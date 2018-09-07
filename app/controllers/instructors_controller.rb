@@ -16,7 +16,7 @@ class InstructorsController < ApplicationController
   end
 
   def create
-    @instructor = Instructor.new(params.require(:instructor).permit(:first_name, :last_name, :age, :education))
+    @instructor = Instructor.new(params.require(:instructor).permit(:first_name, :last_name, :age, :salary, :education))
     if @instructor.save
       redirect_to @instructor
     else
@@ -29,17 +29,22 @@ class InstructorsController < ApplicationController
   def update
     @instructor = Instructor.find(params[:id])
 
-    if @instructor.update(params.require(:instructor).permit(:first_name, :last_name, :email, :age, :education))
+    if @instructor.update(params.require(:instructor).permit(:first_name, :last_name, :email, :age, :salary, :education))
       redirect_to @instructor
     else
       render 'edit'
     end
   end
 
+
+
+
   def destroy
-    @Instructor.destroy
+    @instructor = Instructor.find(params[:id])
+    @instructor.destroy
     respond_to do |format|
-      format.html { redirect_to instructor_url, notice: 'STUDENT HAS BEEN DELETED!' }
-    end
+      format.html { redirect_to instructors_path, notice: 'INSTRUCTOR HAS BEEN DELETED!' }
+  end
+
   end
 end
