@@ -28,8 +28,9 @@
   <%= @cohort.student_id%>
 </p>
 
-<div class="buttons">
+<div class="buttons"><br><br>
   <%= link_to 'List', cohorts_path %>
+  <%= link_to 'Create a Student', new_cohort_path %>
   <%= link_to 'Edit', edit_cohort_path %>
   <%= link_to 'Delete', cohort_path, data: {:confirm => 'Are you sure?'}, :method => :delete %>
 </div>

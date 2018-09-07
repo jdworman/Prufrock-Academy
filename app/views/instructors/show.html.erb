@@ -29,8 +29,9 @@
   <%= @instructor.education %>
 </p>
 
-<div class="buttons">
+<div class="buttons"><br><br>
   <%= link_to 'List', instructors_path %>
-  <%= link_to 'Edit', edit_student_path %>
+  <%= link_to 'Create a Student', new_instructor_path %>
+  <%= link_to 'Edit', edit_instructor_path %>
   <%= link_to 'Delete', instructor_path, data: {:confirm => 'Are you sure?'}, :method => :delete %>
 </div>

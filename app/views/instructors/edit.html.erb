@@ -6,7 +6,13 @@
 <%= f.text_field :last_name, placeholder: "Last Name"%><br>
 <%= f.number_field :age, placeholder: "Age" %><br>
 <%= f.number_field :salary, placeholder: "Salary" %><br>
-<%= f.select :education, ['HS', 'College', 'Masters', 'PHD'], :include_blank => true %><br>
+<%= f.select :education, ['HS', 'College', 'Masters', 'PHD'], :include_blank => true %><br><br>
 
 <%= f.submit 'Edit Instructor' %><br>
 <% end %>
+
+<div class="buttons"><br><br>
+  <%= link_to 'List', instructors_path %>
+  <%= link_to 'Create an Instructor', new_instructor_path %>
+  <%= link_to 'Delete', instructor_path, data: {:confirm => 'Are you sure?'}, :method => :delete %>
+</div>
