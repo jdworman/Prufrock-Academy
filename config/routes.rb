@@ -4,9 +4,12 @@ Rails.application.routes.draw do
   get 'instructors', to: 'instructors#index'
   get 'courses', to: 'courses#index'
   get 'cohorts', to: 'cohorts#index'
-  get 'pages#index', to: 'sessions#new'
+  get 'principal/index'
+ 
 
-  
+
+
+
   get 'login', to: 'sessions#new'
   get 'logout', to: 'sessions#destroy'
 
@@ -16,9 +19,10 @@ Rails.application.routes.draw do
   resources :instructors
   resources :courses
   resources :cohorts
+  resources :principal
   resources :sessions, only: [:create]
   resources :users
 
+end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-end
