@@ -6,8 +6,7 @@ Rails.application.routes.draw do
   get 'cohorts', to: 'cohorts#index'
   get 'pages#index', to: 'sessions#new'
 
-  root 'dashboard#show'
-  get 'users/new'
+  
   get 'login', to: 'sessions#new'
   get 'logout', to: 'sessions#destroy'
 
@@ -18,7 +17,7 @@ Rails.application.routes.draw do
   resources :courses
   resources :cohorts
   resources :sessions, only: [:create]
-  resources :users, only: [:new, :create]
+  resources :users
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

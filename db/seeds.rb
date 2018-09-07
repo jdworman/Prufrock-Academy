@@ -9,4 +9,4 @@ education = ['HS', 'College', 'Masters', 'PHD']
      last_name: Faker::Name.last_name,
      age: Faker::Number.between(16, 32),
      education: education.sample
- })
+ });
