@@ -10,7 +10,10 @@ class ApplicationController < ActionController::Base
   def require_valid_user!
     if current_user.nil?
       flash[:error] = 'You must be logged in to access that page!'
-      redirect_to login_path
+      if request.env['PATH_INFO'] != "/"
+        redirect_to root_path
+      end
     end
   end
+
 end

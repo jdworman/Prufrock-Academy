@@ -3,7 +3,8 @@
 <%= form_with(model: @course, local: true) do |f| %>
 
 <%= f.text_field :name, placeholder: "Course Name"%><br>
-<%= f.text_field :hours, placeholder: "Class Hours" %><br><br>
+<%= f.text_field :hours, placeholder: "Class Hours" %><br>
+<%= f.select(:students, @names, {:prompt => "Please Select"}, {:multiple => true, :size => 10}) %><br>
 
 <%= f.submit 'Edit Course' %><br>
 <% end %>

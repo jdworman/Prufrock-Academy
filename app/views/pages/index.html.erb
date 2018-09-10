@@ -31,14 +31,14 @@
   <div  class="Prufrock"> <br><h1>PRUFROCK PREPATORY<br>SCHOOL</h1>
 </div>
 <div class="login">
-<h6>Log-In</h6>
-<p>Please log in to continue.</p>
+
 
 <%- if flash[:error] %>
   <%= flash[:error] %>
 <% elsif flash[:success] %>
   <%= flash[:success] %>
 <% end %>
+
 
 <%= form_for :session, url: sessions_path do |f| %>
 
@@ -47,19 +47,26 @@
 
 
     <%= f.label :password %>
-    <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
+    <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %><br><br>
 
 
     <%= f.submit 'Log In', class: 'btn btn-primary' %>
 
+      <%= link_to 'Click here to create an account.', new_user_path %>
+
 <% end %>
 
 
-  New User? <%= link_to 'Click here to create an account.', new_user_path %>
 
 </div>
 </div>
-<div class="school"><img src="images/school.jpg" height="450px" width="1150px"></div>
+<div class="school carousel">
+  <img class="active" src="/images/school.jpg">
+  <img src="/images/bus.jpeg">
+  <img src="/images/classroom.jpg">
+  <img src="/images/students.jpg">
+</div>
+
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 

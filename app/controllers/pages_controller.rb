@@ -2,7 +2,6 @@ class PagesController < ApplicationController
   def index
     render layout: false
     @user = User.new
-
   end
 
   def students; end

@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_07_200139) do
+ActiveRecord::Schema.define(version: 2018_09_10_135935) do
+
+  create_table "cohort_students", force: :cascade do |t|
+    t.integer "student_id", null: false
+    t.integer "cohort_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["student_id", "cohort_id"], name: "index_cohort_students_on_student_id_and_cohort_id"
+  end
 
   create_table "cohorts", force: :cascade do |t|
     t.string "name"
@@ -27,6 +35,13 @@ ActiveRecord::Schema.define(version: 2018_09_07_200139) do
     t.integer "hours"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "courses_students_path", id: false, force: :cascade do |t|
+    t.integer "course_id", null: false
+    t.integer "students_path_id", null: false
+    t.index ["course_id"], name: "index_courses_students_path_on_course_id"
+    t.index [nil], name: "index_courses_students_path_on_student_id"
   end
 
   create_table "instructors", force: :cascade do |t|

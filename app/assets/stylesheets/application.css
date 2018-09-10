@@ -342,18 +342,7 @@ h5 {
   color: #fff;
   background-color: #56bf89;
 }
-
-.ticker {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.tickeritem {
-  margin-right: 1rem;
-}
+ 
 
 /* Div-Table
 ================================= */
@@ -405,18 +394,55 @@ h5 {
   display: table-row-group;
 }
 
-/* Log-In
+/* Login
 ================================= */
+ .login form {
+  text-align: center;
+  display: table;
+  margin: -409px 124px 164px 495px;
+  background-color: tan;
+  padding: 10px 20px;
+}
 
-.login {
-  border-radius: 2px 2px 5px 5px;
-  padding: 10px 20px 20px 20px;
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form label input {
+  padding: 4px 5px;
   width: 90%;
-  max-width: 320px;
-  background: #ffffff;
+  transition: width 0.25s;
+}
+
+form input[type="submit"] {
+  width: 100%;
+  background-color: firebrick;
+  color: white;
+  padding: 4px 5px;
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+}
+
+form label input:focus {
+  width: 80%;
+}
+
+/* Carousel
+================================= */
+.carousel {
   position: relative;
-  padding-bottom: 80px;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
-  margin: -413px 122px 11px auto;
- height: 188px;
+    max-width: 100%;
+  text-align: center;
+}
+
+.carousel img {
+  display: none;
+  height: 500px;
+  width: 1299px;
+}
+
+.carousel img.active {
+display: inline-block;
 }

@@ -5,14 +5,8 @@ Rails.application.routes.draw do
   get 'courses', to: 'courses#index'
   get 'cohorts', to: 'cohorts#index'
   get 'principal/index'
- 
-
-
-
-
   get 'login', to: 'sessions#new'
   get 'logout', to: 'sessions#destroy'
-
 
   resources :index
   resources :students

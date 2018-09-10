@@ -5,6 +5,12 @@ end
 
 def edit
   @course = Course.find(params[:id])
+  @student = Student.all
+  @names = []
+  @student.each do |student|
+    @names.push([student.first_name + " " + student.last_name, student.id])
+  end
+  p @names
 end
 
 def new
@@ -17,6 +23,7 @@ end
 
 
 def create
+  p params
   @course = Course.new(params.require(:course).permit(:name, :hours))
 if @course.save
   redirect_to @course
@@ -29,6 +36,7 @@ end
 
 def update
   @course = Course.find(params[:id])
+  @student = Student.find(params[:students])
 
   if @course.update(params.require(:course).permit(:name, :hours))
     redirect_to @course
