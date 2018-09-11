@@ -5,6 +5,15 @@
 <%= f.text_field :name, placeholder: "Course Name"%><br>
 <%= f.text_field :hours, placeholder: "Class Hours" %><br>
 
+<h5>Instructor: </h5>
+<br>
+<%= select_tag :instructor_id, options_for_select(Instructor.all.map { |st| ["#{st.first_name} #{st.last_name}",st.id]}), {:size => 10}%>
+
+<br>
+<h5>Students: </h5>
+<br>
+<%= select_tag :student_id, options_for_select(Student.all.map { |st| ["#{st.first_name} #{st.last_name}",st.id]}), {multiple: :multiple, :size => 25}%>
+
 <%= f.submit 'Add a Course' %><br>
 <% end %>
 

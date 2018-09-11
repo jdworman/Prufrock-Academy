@@ -10,13 +10,19 @@
   </head>
   <body>
 
+
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
+
 
   <div class="admin">
     <header class="adminheader">
       <a href="#" class="symbolheader">
         <!-- <h1>ADMIN PANEL</h1> -->
+                <% if @user %>
+           <%= link_to "LOGOUT", logout_path(@user)%>
+
+          <% end %>
 
       </a>
       <div class="toolbar">

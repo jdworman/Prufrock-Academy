@@ -11,14 +11,23 @@
 
   <body>
 
+
 <div id="headerbar">
+
+
 
   <div class="logo"><img src="/images/logo.png">
   </div>
 </div>
 <div id="navbar">
   <ul>
+       <% if @user %>
+           <li> <%= link_to "LOGOUT", logout_path(@user)%>
+</li>
+          <% end %>
       <li><a href="/">HOME</a></li>
+
+
     <li><%= link_to 'STUDENTS', students_path %></li>
     <li><%= link_to 'INSTRUCTORS', instructors_path %></li>
     <li><%= link_to 'COHORTS', cohorts_path %></li>
@@ -40,6 +49,9 @@
 <% end %>
 
 
+<% if @user.nil? %>
+
+
 <%= form_for :session, url: sessions_path do |f| %>
 
     <%= f.label :email %>
@@ -56,6 +68,7 @@
 
 <% end %>
 
+<% end %>
 
 
 </div>

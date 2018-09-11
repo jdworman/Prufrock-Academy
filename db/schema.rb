@@ -70,8 +70,10 @@ ActiveRecord::Schema.define(version: 2018_09_10_135935) do
     t.string "email"
     t.integer "age"
     t.string "education"
+    t.integer "instructor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["instructor_id"], name: "index_students_on_instructor_id"
   end
 
   create_table "users", force: :cascade do |t|

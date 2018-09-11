@@ -4,4 +4,6 @@ class Student < ApplicationRecord
     validates :age, inclusion: { in: 15...99 }
     validates :education, presence: true
     has_and_belongs_to_many :courses
+
+    belongs_to :instructor
 end
