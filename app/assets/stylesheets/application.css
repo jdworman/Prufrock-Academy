@@ -227,7 +227,6 @@ h5 {
 .adminmain {
   flex: 1;
   grid-area: main;
-  padding: var(--spacing);
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
@@ -241,42 +240,23 @@ h5 {
   justify-content: space-between;
   align-items: center;
   height: 70px;
-  padding: 0 var(--spacing);
   color: #4e5561;
   background-color: #1d2127;
 }
 
-@media screen and (min-width: 48rem) {
-  .admin {
-    --spacing: 2rem;
-  }
-}
 
 .dashboard {
-  --column-count: 2;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 calc(var(--spacing) * -0.5);
   display: grid;
-  grid-template-columns: repeat(var(--column-count), 1fr);
-  grid-gap: var(--spacing);
 }
 
 .dashboarditem {
   flex: 1 1 50%;
   grid-column-end: span 2;
-  padding: calc(var(--spacing) / 2);
 }
 
-.dashboarditem--full {
-  flex-basis: 100%;
-  grid-column: 1 / -1;
-}
 
-.dashboarditem--col {
-  flex-basis: calc(100% / var(--column-count));
-  grid-column-end: span 1;
-}
 
 .symbol {
   display: flex;
@@ -300,7 +280,6 @@ h5 {
   flex: 1;
   justify-content: space-between;
   align-items: center;
-  padding: 0 var(--spacing);
 }
 
 .sidebar {
@@ -332,10 +311,6 @@ h5 {
   white-space: nowrap;
 }
 
-.btn--primary {
-  color: #fff;
-  background-color: #56bf89;
-}
 
 /* Div-Table
 ================================= */
@@ -441,5 +416,3 @@ form label input:focus {
 .carousel img.active {
   display: inline-block;
 }
-
- 
