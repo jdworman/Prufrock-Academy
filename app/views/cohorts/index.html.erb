@@ -5,8 +5,8 @@
       <div class="divTableHead" style="width: 150px">Course Name</div>
       <div class="divTableHead" style="width: 150px">Start Date</div>
       <div class="divTableHead" style="width: 150px">End Date</div>
-      <div class="divTableHead" style="width: 150px">Student ID</div>
-      <div class="divTableHead" style="width: 150px">Instructor ID</div>
+      <div class="divTableHead" style="width: 150px">Students</div>
+      <div class="divTableHead" style="width: 150px">Instructor</div>
     </div>
     <% @cohorts.each do |cohort| %>
       <div class="divTableRow">
@@ -15,7 +15,7 @@
         </div>
         <div class="divTableCell" style="width: 150px"><%= cohort.start_date %></div>
         <div class="divTableCell" style="width: 150px"><%= cohort.end_date %></div>
-        <div class="divTableCell" style="width: 150px"><%= cohort.student_id %></div>
+        <div class="divTableCell" style="width: 150px"><%= cohort.student_ids %></div>
         <div class="divTableCell" style="width: 150px"><%= cohort.instructor_id %></div>
       </div>
     <% end %>

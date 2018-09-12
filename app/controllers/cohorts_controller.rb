@@ -13,10 +13,12 @@ class CohortsController < ApplicationController
 
   def show
     @cohort= Cohort.find(params[:id])
+    @cohort.students << Student.find(params[:save][:student_ids]) if params[:save]
+
   end
 
   def create
-    @cohort = Cohort.new(params.require(:cohort).permit(:name, :start_date, :end_date, :student_id, :instructor_id))
+    @cohort = Cohort.new(params.require(:cohort).permit(:name, :start_date, :end_date,  :instructor_id, :student_id, :course_id))
   if @cohort.save
     redirect_to @cohort
   else
@@ -29,7 +31,7 @@ class CohortsController < ApplicationController
   def update
     @cohort = Cohort.find(params[:id])
 
-    if @cohort.update(params.require(:cohort).permit(:name, :start_date, :end_date, :student_id, :instructor_id))
+    if @cohort.update(params.require(:cohort).permit(:name, :start_date, :end_date,  :instructor_id,  :student_id, :course))
       redirect_to @cohort
     else
       render 'edit'

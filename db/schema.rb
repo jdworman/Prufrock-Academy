@@ -12,27 +12,29 @@
 
 ActiveRecord::Schema.define(version: 2018_09_10_135935) do
 
-  create_table "cohort_students", force: :cascade do |t|
-    t.integer "student_id", null: false
-    t.integer "cohort_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["student_id", "cohort_id"], name: "index_cohort_students_on_student_id_and_cohort_id"
-  end
-
   create_table "cohorts", force: :cascade do |t|
     t.string "name"
     t.date "start_date"
     t.date "end_date"
     t.integer "instructor_id"
-    t.integer "student_id"
+    t.integer "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_cohorts_on_course_id"
+  end
+
+  create_table "cohorts_students", force: :cascade do |t|
+    t.integer "student_id", null: false
+    t.integer "cohort_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["student_id", "cohort_id"], name: "index_cohorts_students_on_student_id_and_cohort_id"
   end
 
   create_table "courses", force: :cascade do |t|
     t.string "name"
     t.integer "hours"
+    t.integer "instructor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

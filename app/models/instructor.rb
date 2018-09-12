@@ -5,5 +5,5 @@ class Instructor < ApplicationRecord
   validates :salary, inclusion: { in: 40000...700000 }
   validates :education, presence: true
 
-  has_many :students
+  has_many :cohorts
 end

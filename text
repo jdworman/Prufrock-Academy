@@ -1,0 +1,2 @@
+<!-- <%= f.collection.select(:instructor_id, Instructor.all, :id, :last_name, required: true) %><br>
+<%= f.select(:students, @names, {:prompt => "Please Select"}, {:multiple => true, :size => 10}) %><br> -->

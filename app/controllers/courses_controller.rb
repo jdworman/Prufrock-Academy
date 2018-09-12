@@ -24,7 +24,7 @@ end
 
 def create
   p params
-  @course = Course.new(params.require(:course).permit(:name, :hours))
+  @course = Course.new(params.require(:course).permit(:name, :hours, :instructor_id, :student_id))
 if @course.save
   redirect_to @course
 else
@@ -38,7 +38,7 @@ def update
   @course = Course.find(params[:id])
   @student = Student.find(params[:students])
 
-  if @course.update(params.require(:course).permit(:name, :hours))
+  if @course.update(params.require(:course).permit(:name, :hours, :instructor_id, :student_id))
     redirect_to @course
   else
     render 'edit'

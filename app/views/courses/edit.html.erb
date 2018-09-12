@@ -1,12 +1,11 @@
-<h1>Edit Courses</h1>
+<%= form_for(@course) do |f| %>
 
-<%= form_with(model: @course, local: true) do |f| %>
-
+<h5>Course Name: </h5>
 <%= f.text_field :name, placeholder: "Course Name"%><br>
+<h5>Course Hours: </h5>
 <%= f.text_field :hours, placeholder: "Class Hours" %><br>
-<%= f.select(:students, @names, {:prompt => "Please Select"}, {:multiple => true, :size => 10}) %><br>
 
-<%= f.submit 'Edit Course' %><br>
+<%= f.submit 'Add a Course' %><br>
 <% end %>
 
 <div class="buttons"><br><br>

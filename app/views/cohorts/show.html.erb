@@ -20,13 +20,18 @@
 </p>
 <p>
   <strong>Instructor ID:</strong>
-  <%= @cohort.instructor_id %>
+  <%= Instructor.find(@cohort.instructor_id).first_name if @cohort.instructor_id %>
+  <%= Instructor.find(@cohort.instructor_id).last_name if @cohort.instructor_id %>
 </p>
 
 <p>
   <strong>Student ID:</strong>
-  <%= @cohort.student_id%>
+  <%= @cohort.student_ids%>
 </p>
+
+<%= form_tag({controller: :cohorts, action: :update}, method: :get) %>
+<%= collection_select(:save, :student_ids, Student.all, :id, :last_name) %>
+<%= submit_tag %>
 
 <div class="buttons"><br><br>
   <%= link_to 'List', cohorts_path %>

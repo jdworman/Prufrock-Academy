@@ -1,13 +1,16 @@
 <h1>Edit Cohort</h1>
 
-<%= form_with(model: @cohort, local: true) do |f| %>
+<%= form_for(@cohort) do |f| %>
 
 <%= f.text_field :name, placeholder: "Cohort Name"%><br>
 <%= f.date_field :start_date, placeholder: "Start Date" %><br>
 <%= f.date_field :end_date, placeholder: "End Date" %><br>
-<%= f.text_field :instructor_id, placeholder: "Instructor ID" %><br>
-<%= f.text_field :student_id, placeholder: "Student ID" %><br><br>
-
+<h5>Instructors: </h5>
+<br>
+<%= f.collection_select(:instructor_id, Instructor.all, :id, :last_name, required: true)%>
+<br>
+<h5>Students: </h5>
+<br>
 <%= f.submit 'Edit Cohort' %><br>
 <% end %>
 
