@@ -42,7 +42,8 @@ class CohortsController < ApplicationController
     @cohort = Cohort.find(params[:id])
     @cohort.destroy
     respond_to do |format|
-      format.html { redirect_to cohorts_path, notice: 'THE COHORT HAS BEEN DELETED!' }
+      format.html { redirect_to cohorts_url, notice: 'COHORT SUCCESSFULLY DELETED' }
+      format.js { render layout: false }
   end
 
 

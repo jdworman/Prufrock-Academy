@@ -29,6 +29,12 @@
   <%= @cohort.student_ids%>
 </p>
 
+<p>
+  <strong>Course Name:</strong>
+  <%= @cohort.course.name%>
+</p>
+
+
 <%= form_tag({controller: :cohorts, action: :update}, method: :get) %>
 <%= collection_select(:save, :student_ids, Student.all, :id, :last_name) %>
 <%= submit_tag %>
@@ -37,5 +43,6 @@
   <%= link_to 'List', cohorts_path %>
   <%= link_to 'Create a Cohort', new_cohort_path %>
   <%= link_to 'Edit', edit_cohort_path %>
-  <%= link_to 'Delete', cohort_path, data: {:confirm => 'Are you sure?'}, :method => :delete %>
+  <%= link_to 'Delete', cohort_path(@cohort), data: {:confirm => 'Are you sure?'}, :method => :delete ,
+  :remote => true, :class => 'delete_cohort' %>
 </div>

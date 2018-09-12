@@ -18,5 +18,6 @@
   <%= link_to 'List', courses_path %>
   <%= link_to 'Create a Course', new_course_path %>
   <%= link_to 'Edit', edit_course_path %>
-  <%= link_to 'Delete', course_path, data: {:confirm => 'Are you sure?'}, :method => :delete %>
+  <%= link_to 'Delete', course_path(@course), data: {:confirm => 'Are you sure?'}, :method => :delete ,
+  :remote => true, :class => 'delete_course' %>
 </div>

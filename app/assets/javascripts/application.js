@@ -9,11 +9,22 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+
+//= require rails-ujs
+//= require jquery
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require_tree .
+//= require_tree
+
+window.onload = function() {
+ if (window.jQuery) {
+     console.log('jQuery loaded successfully')
+ } else {
+     console.log('jQuery is not running')
+ }
+}
+
 
    document.addEventListener("DOMContentLoaded", init);
 

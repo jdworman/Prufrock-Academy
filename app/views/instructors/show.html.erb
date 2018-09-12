@@ -33,5 +33,6 @@
   <%= link_to 'List', instructors_path %>
   <%= link_to 'Create an Instructor', new_instructor_path %>
   <%= link_to 'Edit', edit_instructor_path %>
-  <%= link_to 'Delete', instructor_path, data: {:confirm => 'Are you sure?'}, :method => :delete %>
+  <%= link_to 'Delete', instructor_path(@instructor), data: {:confirm => 'Are you sure?'}, :method => :delete ,
+  :remote => true, :class => 'delete_instructor' %>
 </div>

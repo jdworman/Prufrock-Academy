@@ -43,7 +43,8 @@ class InstructorsController < ApplicationController
     @instructor = Instructor.find(params[:id])
     @instructor.destroy
     respond_to do |format|
-      format.html { redirect_to instructors_path, notice: 'INSTRUCTOR HAS BEEN DELETED!' }
+      format.html { redirect_to instructors_url, notice: 'INSTRUCTOR SUCCESSFULLY DELETED' }
+      format.js { render layout: false }
   end
 
   end

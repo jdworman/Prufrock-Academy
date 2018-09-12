@@ -11,6 +11,9 @@
 <br>
 <h5>Students: </h5>
 <br>
+<h5>Course Name: </h5>
+<%= f.collection_select(:course_id, Course.all, :id, :name, required: true) %><br><br>
+
 
 <%= f.submit 'Add a Cohort' %><br>
 <% end %>

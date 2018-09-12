@@ -17,13 +17,13 @@ class StudentsController < ApplicationController
 
   def create
     @student = Student.new(params.require(:student).permit(:first_name, :last_name, :age, :education))
-  if @student.save
-    redirect_to @student
-  else
-    errors = @student.errors.full_messages
-    flash.now[:error] = errors
-    render 'new'
-  end
+    if @student.save
+      redirect_to @student
+    else
+      errors = @student.errors.full_messages
+      flash.now[:error] = errors
+      render 'new'
+    end
  end
 
   def update
@@ -40,11 +40,8 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
     @student.destroy
     respond_to do |format|
-      format.html { redirect_to students_path, notice: 'STUDENT HAS BEEN DELETED!' }
+      format.html { redirect_to students_url, notice: 'STUDENT SUCCESSFULLY DELETED' }
+      format.js { render layout: false }
+    end
   end
-
- 
-
-  end
-
 end
