@@ -14,8 +14,7 @@
  *= require_self
  */
 
-
- /* Body section
+/* Body section
  ================================= */
 
 html, body {
@@ -97,8 +96,6 @@ h5 {
   padding: 0;
   margin: 0;
 }
-
-
 
 /* Header Bar section
 ================================= */
@@ -281,7 +278,6 @@ h5 {
   grid-column-end: span 1;
 }
 
-
 .symbol {
   display: flex;
   flex: 0 0 250px;
@@ -341,7 +337,6 @@ h5 {
   background-color: #56bf89;
 }
 
-
 /* Div-Table
 ================================= */
 
@@ -394,7 +389,8 @@ h5 {
 
 /* Login
 ================================= */
- .login form {
+
+.login form {
   text-align: center;
   display: table;
   margin: -409px 124px 164px 495px;
@@ -429,9 +425,10 @@ form label input:focus {
 
 /* Carousel
 ================================= */
+
 .carousel {
   position: relative;
-    max-width: 100%;
+  max-width: 100%;
   text-align: center;
 }
 
@@ -442,69 +439,7 @@ form label input:focus {
 }
 
 .carousel img.active {
-display: inline-block;
-}
-
-
-
-/* Grid
-================================= */
-/* -- FLUID GRID STYLES -- */
-
-#Grid{
-  margin-bottom: 40px;
-  text-align: justify;
-  font-size: 0.1px;
-}
-
-#Grid li{
   display: inline-block;
-  background: #eee;
-  width: 23%;
-  padding-top: 23%; /* Used instead of height to give elements fluid, width-based height */
-  margin-bottom: 2.5%;
 }
 
-#Grid:after{
-  content: '';
-  display: inline-block;
-  width: 100%;
-  border-top: 10px dashed #922d8d; /* Border added to make element visible for demonstration purposes */
-}
-
-#Grid .placeholder{
-  padding: 0;
-  border-top: 10px solid #922d8d; /* Border added to make element visible for demonstration purposes */
-}
-
-/* -- MEDIA QUERIES DEFINING RESPONSIVE LAYOUTS -- */
-
-/* 3 COL */
-
-@media (max-width: 800px){
-  #Grid li{
-    width: 31%;
-    padding-top: 31%;
-    margin-bottom: 3%;
-  }
-}
-
-/* 2 COL */
-
-@media (max-width: 600px){
-  #Grid li{
-    width: 48%;
-    padding-top: 48%;
-    margin-bottom: 4%;
-  }
-}
-
-/* SINGLE COL */
-
-@media (max-width: 400px){
-  #Grid li{
-    width: 100%;
-    padding-top: 100%;
-    margin-bottom: 5%;
-  }
-}
+ 
