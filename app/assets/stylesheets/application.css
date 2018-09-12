@@ -203,7 +203,6 @@ h5 {
 ================================= */
 
 .admin {
-  --spacing: 1rem;
   display: flex;
   flex-wrap: wrap;
   height: 100vh;
@@ -282,20 +281,6 @@ h5 {
   grid-column-end: span 1;
 }
 
-@media screen and (min-width: 48rem) {
-  .dashboard {
-    --column-count: 4;
-  }
-}
-
-@supports (display: grid) {
-  .dashboard {
-    margin: 0;
-  }
-  .dashboarditem {
-    padding: 0;
-  }
-}
 
 .symbol {
   display: flex;
