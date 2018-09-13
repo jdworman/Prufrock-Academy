@@ -14,4 +14,401 @@
  *= require_self
  */
 
- 
+ /* Body section
+  ================================= */
+
+ html, body {
+   background-color: #003664;
+   color: #ffd200;
+   z-index: 5;
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+ }
+
+ *, *::before, *::after {
+   box-sizing: border-box;
+ }
+
+ a {
+   color: black;
+   margin: 40px;
+   text-decoration: none;
+ }
+
+ td a {
+   color: black;
+   font-size: 20px;
+ }
+
+ a:visited, td a {
+   color: black;
+   font-size: 20px;
+ }
+
+ h1 {
+   font-family: sans-serif;
+   font-size: 30px;
+   text-decoration: underline;
+   color: #ffd200;
+   text-align: center;
+   margin: 35px 0px 0px 116px;
+   position: relative;
+   margin: 40px;
+   margin-left: 240px;
+   display: inline-block;
+   text-transform: uppercase;
+ }
+
+ h2 {
+   font-family: sans-serif;
+   font-size: 30px;
+   text-decoration: underline;
+   color: #ffd200;
+   text-align: center;
+   position: relative;
+   margin-left: 653px;
+   display: inline-block;
+   text-transform: uppercase;
+ }
+
+ h3 {
+   margin: 101px 0px 0px 600px;
+   font-family: sans-serif;
+   font-size: 30px;
+   text-decoration: underline;
+   color: #ffd200;
+   text-align: center;
+   position: relative;
+   display: inline-block;
+   text-transform: uppercase;
+ }
+
+ h4 {
+   margin: 20px -900px 0px 0px;
+   color: #ffd200;
+   font-size: 50px;
+ }
+
+ h5 {
+   color: #000;
+   font-size: 40px;
+   padding: 0;
+   margin: 0;
+ }
+
+ /* Header Bar section
+ ================================= */
+
+ #headerbar {
+   background-color: #ffd200;
+   padding: 26px;
+   margin: -6px;
+   margin-right: -240px;
+   list-style-type: center;
+   text-align: center;
+ }
+
+ /* HeaderBar section
+ ================================= */
+
+ #headerbar ul {
+   background-color: #ffd200;
+   padding: 47px;
+   margin: 177px;
+   border-radius: 5px;
+   top: 0;
+   padding-top: 0;
+ }
+
+ /* Navigation section
+ ================================= */
+
+ #navbar ul {
+   padding: 15px;
+   text-align: center;
+   background-color: white;
+   margin: 214px -200px 164px -200px;
+   border-radius: 5px;
+   position: relative;
+   z-index: 20
+ }
+
+ #navbar ul li {
+   display: inline;
+ }
+
+ #navbar ul li a {
+   text-decoration: none;
+   font-family: Arial;
+   padding: .2em 1em;
+   color: black;
+   background-color: none;
+ }
+
+ #navbar ul li a:hover {
+   color: white;
+   background-color: #003664;
+ }
+
+ /* Images
+  ================================= */
+
+ .logo {
+   margin-bottom: -230px;
+   display: flex;
+   justify-content: center;
+   height: 200px;
+   width: auto;
+ }
+
+ .lion {
+   margin: -407px 700px 228px -221px;
+   display: flex;
+   justify-content: left;
+   height: 189px;
+   width: 100px;
+ }
+
+ .school {
+   margin: -165px -26px 1680px 72px;
+   display: flex;
+ }
+
+ .slogan {
+   display: flex;
+   position: relative;
+ }
+
+ .Prufrock {
+   display: flex;
+   margin: -414px -182px -15px 69px;
+ }
+
+ .teachers img {
+   width: 300px;
+   height: 300px;
+ }
+
+ .principal img {
+   justify-content: center;
+   width: 300px;
+   height: 300px;
+ }
+
+ /* Dashboard
+ ================================= */
+
+ .admin {
+   display: flex;
+   flex-wrap: wrap;
+   height: 100vh;
+   grid-template-rows: 70px 1fr 70px;
+   grid-template-columns: 250px 1fr;
+   grid-template-areas: "header header" "nav main" "footer footer";
+ }
+
+ .adminheader {
+   display: flex;
+   flex-basis: 100%;
+   grid-area: header;
+   height: 70px;
+   background-color: #fff;
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+   position: relative;
+ }
+
+ .adminnav {
+   flex: 0 0 250px;
+   grid-area: nav;
+   background-color: #313541;
+ }
+
+ .adminmain {
+   flex: 1;
+   grid-area: main;
+   overflow-y: auto;
+   overflow-x: hidden;
+   -webkit-overflow-scrolling: touch;
+   background-color: #f4f7fa;
+ }
+
+ .adminfooter {
+   display: flex;
+   grid-area: footer;
+   flex-basis: 100%;
+   justify-content: space-between;
+   align-items: center;
+   height: 70px;
+   color: #4e5561;
+   background-color: #1d2127;
+ }
+
+ .dashboard {
+   display: flex;
+   flex-wrap: wrap;
+   display: grid;
+ }
+
+ .dashboarditem {
+   flex: 1 1 50%;
+   grid-column-end: span 2;
+ }
+
+ .symbol {
+   display: flex;
+   flex: 0 0 250px;
+   height: 70px;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   margin: 0;
+   color: #fff;
+   background-color: #dc5a60;
+   font-size: 1rem;
+ }
+
+ .symbol h1 {
+   margin: 0;
+ }
+
+ .toolbar {
+   display: flex;
+   flex: 1;
+   justify-content: space-between;
+   align-items: center;
+ }
+
+ .sidebar {
+   list-style-type: none;
+   padding: 0;
+ }
+
+ .sidebar__item {
+   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+ }
+
+ .sidebar__link {
+   display: block;
+   padding: 1rem 2rem;
+   color: #76808f;
+   text-decoration: none;
+ }
+
+ .sidebar__link:hover, .sidebar__link:focus {
+   color: #fff;
+   background-color: #1f222d;
+ }
+
+ .btn {
+   display: inline-block;
+   border-radius: 5em;
+   border: 0;
+   padding: 0.5rem 1rem;
+   white-space: nowrap;
+ }
+
+ /* Div-Table
+ ================================= */
+
+ .divTable {
+   display: table;
+   width: 100%;
+ }
+
+ .divTableRow {
+   display: table-row;
+ }
+
+ .divTableHeading {
+   background-color: #EEE;
+   display: table-header-group;
+ }
+
+ .divTableCell, .divTableHead {
+   border-bottom: 2px dotted #999999;
+   border-right: 2px solid #CCCCCC;
+   display: table-cell;
+   padding: 7px 10px;
+   text-align: center;
+ }
+
+ .divTableCell:last-child, .divTableHead:last-child {
+   border-right: 0;
+ }
+
+ .divTableHead {
+   background-color: #EEE;
+   font-weight: bolder;
+ }
+
+ .divTableHeading {
+   background-color: #EEE;
+   display: table-header-group;
+   font-weight: bold;
+ }
+
+ .divTableFoot {
+   background-color: #EEE;
+   display: table-footer-group;
+   font-weight: bold;
+ }
+
+ .divTableBody {
+   display: table-row-group;
+ }
+
+ /* Login
+ ================================= */
+
+ .login form {
+   text-align: center;
+   display: table;
+   margin: -409px 124px 164px 495px;
+   background-color: tan;
+   padding: 10px 20px;
+ }
+
+ form label {
+   display: block;
+   margin-bottom: 10px;
+ }
+
+ form label input {
+   padding: 4px 5px;
+   width: 90%;
+   transition: width 0.25s;
+ }
+
+ form input[type="submit"] {
+   width: 100%;
+   background-color: firebrick;
+   color: white;
+   padding: 4px 5px;
+   width: 100%;
+   border: 0;
+   border-radius: 5px;
+ }
+
+ form label input:focus {
+   width: 80%;
+ }
+
+ /* Carousel
+ ================================= */
+
+ .carousel {
+   position: relative;
+   max-width: 100%;
+   text-align: center;
+ }
+
+ .carousel img {
+   display: none;
+   height: 500px;
+   width: 1299px;
+ }
+
+ .carousel img.active {
+   display: inline-block;
+ }
