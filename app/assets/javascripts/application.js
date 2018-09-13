@@ -10,7 +10,6 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 
-//= require rails-ujs
 //= require jquery
 //= require rails-ujs
 //= require activestorage
@@ -18,26 +17,26 @@
 //= require_tree
 
 window.onload = function() {
- if (window.jQuery) {
-     console.log('jQuery loaded successfully')
- } else {
-     console.log('jQuery is not running')
- }
+  if (window.jQuery) {
+    console.log('jQuery loaded successfully')
+  } else {
+    console.log('jQuery is not running')
+  }
 }
 
 
-   document.addEventListener("DOMContentLoaded", init);
+document.addEventListener("DOMContentLoaded", init);
 
-   function init(){
-     document.querySelectorAll(".carousel").forEach(carouselInit);
-   }
+function init() {
+  document.querySelectorAll(".carousel").forEach(carouselInit);
+}
 
-   function carouselInit(carousel){
-     //on this page, carousel is the <figure> element
-     setInterval(function(){
-       let active = carousel.querySelector(".active"),
-       next = active.nextElementSibling || carousel.querySelector("img");
-       active.classList.remove("active");
-       next.classList.add("active");
-     }, 5000);
-   }
+function carouselInit(carousel) {
+  //on this page, carousel is the <figure> element
+  setInterval(function() {
+    let active = carousel.querySelector(".active"),
+      next = active.nextElementSibling || carousel.querySelector("img");
+    active.classList.remove("active");
+    next.classList.add("active");
+  }, 5000);
+}
