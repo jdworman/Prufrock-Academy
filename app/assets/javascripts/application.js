@@ -24,5 +24,22 @@ window.onload = function() {
     console.log('jQuery is not running')
   }
 }
-
- 
+//
+//
+// document.addEventListener("DOMContentLoaded", init);
+//
+// function init() {
+//   document.querySelectorAll(".carousel").forEach(carouselInit);
+// }
+//
+// function carouselInit(carousel) {
+//   //on this page, carousel is the <figure> element
+//   setInterval(function() {
+//     let active = carousel.querySelector(".active"),
+//       next = active.nextElementSibling || carousel.querySelector("img");
+//     active.classList.remove("active");
+//     next.classList.add("active");
+//   }, 5000);
+// }
+//
+//
