@@ -1,9 +1,6 @@
 require 'faker'
 
-
-
 education = %w[HS College Masters PHD]
-
 
 250.times do
   Student.create(
